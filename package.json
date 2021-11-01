@@ -1,0 +1,41 @@
+{
+  "name": "e2e-testcafe",
+  "version": "1.0.0",
+  "description": "An example repository for E2E tests with testcafe",
+  "main": "",
+  "scripts": {
+    "dev": "npm i",
+    "clean": "rimraf reports/*",
+    "test": "testcafe --env=acc \"chrome --disable-web-security --start-maximized\" --test-meta TESTSET=regressie",
+    "test:headless": "testcafe --env=acc \"chrome:headless --disable-web-security --start-maximized\" --test-meta TESTSET=regressie",
+    "report": "allure generate reports/allure/allure-results --clean -o reports/allure/allure-report",
+    "report:publish": "allure open reports/allure/allure-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yusufkaracaburun/e2e-testcafe.git"
+  },
+  "keywords": [
+    "e2e",
+    "testcafe"
+  ],
+  "author": "Yusuf Karacaburun",
+  "license": "ISC",
+  "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "allure-commandline": "^2.13.8",
+    "eslint": "^7.30.0",
+    "eslint-plugin-testcafe": "^0.2.1",
+    "minimist": "^1.2.5",
+    "rimraf": "^3.0.2",
+    "testcafe": "1.14.0",
+    "testcafe-reporter-allure": "^1.0.5",
+    "testcafe-reporter-html": "^1.4.6",
+    "testcafe-reporter-slack-custom": "^1.3.0",
+    "testcafe-reporter-spec": "^2.1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/yusufkaracaburun/e2e-testcafe/issues"
+  },
+  "homepage": "https://github.com/yusufkaracaburun/e2e-testcafe#readme"
+}
