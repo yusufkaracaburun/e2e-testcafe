@@ -1,0 +1,48 @@
+{
+  "src": "tests",
+  "concurrency": 2,
+  "speed": 0.8,
+  "pageRequestTimeout": 60000,
+  "browserInitTimeout": 120000,
+  "ajaxRequestTimeout": 120000,
+  "selectorTimeout": 20000,
+  "pageLoadTimeout": 25000,
+  "assertionTimeout": 30000,
+  "disableMultipleWindows": false,
+  "stopOnFirstFail": false,
+  "skipJsErrors": true,
+  "skipUncaughtErrors": true,
+  "disablePageCaching": true,
+  "disableScreenshots": false,
+  "screenshots": {
+    "path": "reports/screenshots/",
+    "takeOnFails": true,
+    "pathPattern": "${DATE}_${TIME}/test-${TEST_INDEX}/${USERAGENT}/${FILE_INDEX}_${QUARANTINE_ATTEMPT}.png",
+    "fullPage": true
+  },
+  "quarantineMode": true,
+  "debugMode": false,
+  "debugOnFail": false,
+  "developmentMode": false,
+  "qrCode": true,
+  "color": true,
+  "reporter": [
+    {
+      "name": "slack-custom"
+    },
+    {
+      "name": "html",
+      "output": "reports/report.html"
+    },
+    {
+      "name": "spec"
+    },
+    {
+      "name": "allure"
+    },
+    {
+      "name": "xunit",
+      "output": "reports/xml/report.xml"
+    }
+  ]
+}

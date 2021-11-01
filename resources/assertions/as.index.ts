@@ -1,0 +1,1 @@
+export { default as exampleAS } from './example.as'

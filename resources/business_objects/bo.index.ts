@@ -1,0 +1,1 @@
+export { default as exampleBO } from "./example.bo";
