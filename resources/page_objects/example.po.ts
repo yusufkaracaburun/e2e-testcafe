@@ -11,6 +11,8 @@ class ExamplePO extends BasePageObject {
         dropdown: Selector('[data-testid=unique-id]').find('select'),
         dropdownItem: Selector('[data-testid=unique-id]'),
         calendar: Selector('[data-testid=unique-id]'),
+        uploadBijlage: Selector('[data-testid=fileUploader-DocumentUpload]'),
+        bijlageItem: Selector('[data-testid=documentListItem-Item]')
     };
 
 // All click functions for buttons or links
@@ -31,6 +33,10 @@ class ExamplePO extends BasePageObject {
     }
 
 // Other functions
+    async uploadFiles(selector: Selector, selectorItem: Selector, files: Array<string>) {
+        await selectorUtils.uploadFiles(this.component.uploadBijlage, this.component.bijlageItem, files)
+    }
+
     async getValueField() {
         return this.component.field.value;
     }
