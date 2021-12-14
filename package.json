@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm i",
     "clean": "rimraf reports/*",
-    "test": "testcafe --env=acc \"chrome --disable-web-security --start-maximized\" --test-meta TESTSET=test",
+    "test": "testcafe --env=acc \"chrome:headless --disable-web-security --start-maximized\" --test-meta TESTSET=retest",
     "test:regression": "testcafe --env=acc \"chrome:headless --disable-web-security --start-maximized\" --test-meta TESTSET=regressie",
     "report": "allure generate reports/allure/allure-results --clean -o reports/allure/allure-report",
     "report:publish": "allure open reports/allure/allure-report"
